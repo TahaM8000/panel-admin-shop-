@@ -9,10 +9,11 @@ class User(AbstractBaseUser):
     lastName = models.CharField(max_length=100, null=True, blank=True)
     is_admin = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
+    Avatar = models.ImageField(upload_to="images/Avatar",blank=True,null=True)
 
     code = models.IntegerField(blank=True,null=True)
 
-    # receipt = models.ManyToManyField(Receipt ,blank=True,related_name="user")
+
 
     USERNAME_FIELD = 'phoneNumber'
     objects = MyUserManager()
