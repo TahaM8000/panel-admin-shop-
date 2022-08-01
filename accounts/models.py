@@ -21,6 +21,9 @@ class User(AbstractBaseUser):
     def __str__(self):
         return str(self.phoneNumber) + " - " + str(self.firstName) + " " + str(self.lastName)
 
+    def full_name(self):
+        return str(self.firstName) + " " + str(self.lastName)
+
     def has_perm(self, perm, obj=None):
         return True
 

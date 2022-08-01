@@ -9,7 +9,7 @@
                 <img src="{% if user.Avatar %}{{user.Avatar.url}}{% else %}{% static 'panel/assets/images/users/avatar-1.jpg' %}{% endif %}" alt="user-img" title="Mat Helme" class="img-circle img-thumbnail img-responsive">
                 <div class="user-status offline"><i class="zmdi zmdi-dot-circle"></i></div>
             </div>
-            <h5><a href="#">{% block user_name %}{% endblock %}</a> </h5>
+            <h5><a href="#">{{user.full_name}}</a> </h5>
             <ul class="list-inline">
                 <li>
                     <a href="#" >
@@ -35,6 +35,8 @@
                 <li>
                     <a href="index.html" class="waves-effect"><i class="zmdi zmdi-view-dashboard"></i> <span> داشبورد </span> </a>
                 </li>
+
+                
 
                 <li class="has_sub">
                     <a href="javascript:void(0);" class="waves-effect"><i class="zmdi zmdi-invert-colors"></i> <span> رابط کاربی </span> <span class="menu-arrow"></span></a>
